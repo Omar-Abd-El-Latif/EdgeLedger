@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Read Our Blog</title>
+</head>
+<body>
+   <header class="hero blog">
+       <div class="navbar" id="navbar">
+           <h1 class="logo">
+              <span class="text-primary">Edge<i class="fas fa-book-open"></span></i>Edgeledger
+           </h1>
+           <nav>
+               <ul>
+                   <li><a href="index.html">home</a></li>
+                   <li><a href="index.html#about">About</a></li>
+                   <li><a href="index.html#cases">Cases</a></li>
+                   <li><a href="index.html#blog">blog</a></li>
+                   <li><a href="index.html#contact">contact</a></li>
+               </ul>
+           </nav>
+       </div>
+       <div class="content">
+           <h1>Blog</h1>
+           
+    
+       </div>
+   </header>
+   
+   <main>
+   <section class="post">
+       <h2>Blog Post One</h2>
+       
+                    <p class="meta">
+                        <i class="fas fa-user"></i> <strong> Posted by johne Doe</strong>| April 19 2020
+                    </p>
+                    <img src="./image/blog/blog1.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod possimus ex error assumenda, voluptatum ut accusantium atque consequatur rerum praesentium autem laborum vitae non nam itaque corporis officiis iure aut!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In quod aspernatur ut reprehenderit! Pariatur rem perferendis est in odit modi. Id labore cupiditate quae dignissimos necessitatibus fugiat beatae repellendus iste exercitationem omnis voluptates error, tempora nobis iusto sed expedita sapiente quis numquam illum amet aliquid? Id voluptatibus nobis pariatur similique totam vero aliquam eos nihil. Cumque corporis dolores quod tempore.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In quod aspernatur ut reprehenderit! Pariatur rem perferendis est in odit modi. Id labore cupiditate quae dignissimos necessitatibus fugiat beatae repellendus iste exercitationem omnis voluptates error, tempora nobis iusto sed expedita sapiente quis numquam illum amet aliquid? Id voluptatibus nobis pariatur similique totam vero aliquam eos nihil. Cumque corporis dolores quod tempore.</p>
+   </section>
+   </main>
+   <footer class="footer bg-dark">
+       <div class="social">
+           <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+           <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+           <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+           <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+       </div>
+    <p>Copyright &copy: 2020 - Edgeledger</p>
+   </footer>
+   <script>
+    const navbar = document.getElementById('navbar');
+    let scrolled = false;
+
+    window.onscroll = function () {
+      if (window.pageYOffset > 100) {
+        navbar.classList.remove('top');
+        if (!scrolled) {
+          navbar.style.transform = 'translateY(-70px)';
+        }
+        setTimeout(function () {
+          navbar.style.transform = 'translateY(0)';
+          scrolled = true;
+        }, 200);
+      } else {
+        navbar.classList.add('top');
+        scrolled = false;
+      }
+    };
+     // Smooth Scrolling
+     $('#navbar a, .btn').on('click', function (e) {
+      if (this.hash !== '') {
+        e.preventDefault();
+
+        const hash = this.hash;
+
+        $('html, body').animate(
+          {
+            scrollTop: $(hash).offset().top - 100,
+          },
+          800
+        );
+      }
+    });
+ </script>
+</body>
+</html>
